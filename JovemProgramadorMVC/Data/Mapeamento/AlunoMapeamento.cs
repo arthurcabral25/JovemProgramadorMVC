@@ -12,9 +12,9 @@ namespace JovemProgramadorMVC.Data.Mapeamento
 
             builder.HasKey(t => t.Id);
 
-            builder.Property(t => t.Matricula).HasColumnType("varchar(20)");
+            builder.Property(t => t.Matricula).HasColumnType("varchar(50)");
             builder.Property(t => t.Nome).HasColumnType("varchar(50)");
-            builder.Property(t => t.Cpf).HasColumnType("varchar(14)");
+            builder.Property(t => t.Cpf).HasColumnType("varchar(50)");
 
         }
     }
