@@ -1,11 +1,9 @@
 ﻿@{
     ViewData["Title"] = "Alunos";
 }
-@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+
+@model List<Aluno>
+
 <table class="table">
     <thead>
         <tr>
@@ -15,23 +13,16 @@
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>1</td>
-            <td>Otto</td>
-            <td>000.000.000-00</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>2</td>
-            <td>Thornton</td>
-            <td>000.000.000-00</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>3</td>
-            <td>Larry Bird</td>
-            <td>000.000.000-00</td>
-        </tr>
+        @if (Model != null && Model.Any())
+        {
+            foreach (Aluno aluno in Model)
+            {
+                <tr>
+                    <td>@aluno.Matricula</td>
+                    <td>@aluno.Nome</td>
+                    <td>@aluno.Cpf</td>
+                </tr>
+            }
+        }
     </tbody>
 </table>
