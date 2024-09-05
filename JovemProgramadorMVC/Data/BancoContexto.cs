@@ -16,6 +16,11 @@ namespace JovemProgramadorMVC.Data
             modelBuilder.ApplyConfiguration(new AlunoMapeamento());
         }
 
+        internal void SavedChanges()
+        {
+            throw new NotImplementedException();
+        }
+
         public DbSet<Aluno> Aluno { get; set; }
     }
 }
