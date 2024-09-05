@@ -1,0 +1,24 @@
+﻿@model Aluno
+
+<form asp-controller="Aluno" asp-action="EditarAluno" method="post">
+    <input type="hidden" asp-for="Id"/>
+
+    <div class="mb-3  col-md-6">
+        <label for="exampleInputEmail1" class="form-label">Nome</label>
+        <input type="text" asp-for="Nome" class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-6">
+        <label for="exampleInputEmail1" class="form-label">Matrícula</label>
+        <input type="text" asp-for="Matricula " class="form-control">
+    </div>
+
+    <div class="mb-3 col-md-6">
+        <label for="exampleInputEmail1" class="form-label">Cpf</label>
+        <input type="text" asp-for="Cpf" class="form-control">
+    </div>
+
+    <div class="text-center">
+        <button type="submit" class="btn btn-outline-dark mt-3">Editar</button>
+    </div>
+</form>
