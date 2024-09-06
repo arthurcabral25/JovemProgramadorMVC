@@ -49,10 +49,10 @@ namespace JovemProgramadorMVC.Controllers
             return RedirectToAction("index");
         }
 
-        public IActionResult Deletar(Aluno aluno)
+        public IActionResult Excluir(Aluno aluno)
         {
-            _alunoRepositorio.DeletarAluno(aluno);
-            return View();
+            _alunoRepositorio.Excluir(aluno);
+            return RedirectToAction("index");
         }
     }
 }

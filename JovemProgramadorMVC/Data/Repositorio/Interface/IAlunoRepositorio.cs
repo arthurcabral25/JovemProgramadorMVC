@@ -8,7 +8,7 @@ namespace JovemProgramadorMVC.Data.Repositorio.Interface
         void InserirAluno(Aluno aluno);
         Aluno BuscarId(int id);
         void EditarAluno(Aluno aluno);
-        void DeletarAluno(Aluno aluno);
+        void Excluir(Aluno aluno);
     }
 
 }
