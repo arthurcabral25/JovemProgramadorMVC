@@ -1,5 +1,6 @@
 ﻿using JovemProgramadorMVC.Data.Repositorio.Interface;
 using JovemProgramadorMVC.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace JovemProgramadorMVC.Data.Repositorio
 {
@@ -32,6 +33,12 @@ namespace JovemProgramadorMVC.Data.Repositorio
         public void EditarAluno(Aluno aluno)
         {
             _bancoContexto.Aluno.Update(aluno);
+            _bancoContexto.SaveChanges();
+        }
+
+        public void DeletarAluno(Aluno aluno)
+        {
+            _bancoContexto.Aluno.Remove(aluno);
             _bancoContexto.SaveChanges();
         }
     }
