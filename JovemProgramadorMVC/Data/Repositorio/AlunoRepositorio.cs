@@ -32,7 +32,7 @@ namespace JovemProgramadorMVC.Data.Repositorio
         public void EditarAluno(Aluno aluno)
         {
             _bancoContexto.Aluno.Update(aluno);
-            _bancoContexto.SavedChanges();
+            _bancoContexto.SaveChanges();
         }
     }
 }
