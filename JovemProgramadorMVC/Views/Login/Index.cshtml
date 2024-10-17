@@ -7,8 +7,8 @@
 
 @model Usuario
 
-<form class="row g-3">
-    <div class="col-md-6">
+<form asp-controller="Login" asp-action="Buscar" method="get">
+    <input type="hidden" asp-for="Id" />    <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Usuário</label>
         <input type="email" asp-for="Email" class="form-control" id="inputEmail4" >
         <label for="inputPassword4" class="form-label">Senha</label>
@@ -16,6 +16,6 @@
     </div>
 
     <div class="col-12">
-        <a type="submit" class="btn btn-outline-dark" role="button" asp-controller="Login" asp-action="Buscar" asp-route-Email="Usuario">Editar</a>
+        <button type="submit" class="btn btn-outline-dark mt-3">Entrar</button>
     </div>
 </form>

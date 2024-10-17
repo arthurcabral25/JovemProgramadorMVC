@@ -15,6 +15,7 @@ namespace JovemProgramadorMVC.Data
         {
             modelBuilder.ApplyConfiguration(new AlunoMapeamento());
             modelBuilder.ApplyConfiguration(new ProfessorMapeamento());
+            modelBuilder.ApplyConfiguration(new UsuarioMapeamento());
 
         }
 

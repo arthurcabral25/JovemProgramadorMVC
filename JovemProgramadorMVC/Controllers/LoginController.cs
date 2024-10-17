@@ -23,13 +23,13 @@ namespace JovemProgramadorMVC.Controllers
         public IActionResult Buscar(Usuario usuario)
         {
             var verificar = _usuarioRepositorio.BuscarUsuario(usuario);
-            if (verificar = true)
+            if (verificar)
             {
-                return Index();
+                return RedirectToAction("index", "Home");
             }
             else
             {
-                return Index();
+                return RedirectToAction("index");
             }
 
         }

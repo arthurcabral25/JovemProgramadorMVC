@@ -1,0 +1,1 @@
+﻿insert into Professor(Nome, Cpf) Values('1','1')
