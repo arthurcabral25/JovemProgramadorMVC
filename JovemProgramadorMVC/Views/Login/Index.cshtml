@@ -5,16 +5,17 @@
     Layout = "_LayoutLogin";
 }
 
+@model Usuario
+
 <form class="row g-3">
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Usuário</label>
-        <input type="email" class="form-control" id="inputEmail4" >
+        <input type="email" asp-for="Email" class="form-control" id="inputEmail4" >
         <label for="inputPassword4" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="inputPassword4" >
+        <input type="password" asp-for="Senha" class="form-control" id="inputPassword4">
     </div>
 
     <div class="col-12">
-        <button class="btn btn-primary col-1" type="button">Entrar</button>
-
+        <a type="submit" class="btn btn-outline-dark" role="button" asp-controller="Login" asp-action="Buscar" asp-route-Email="Usuario">Editar</a>
     </div>
 </form>
